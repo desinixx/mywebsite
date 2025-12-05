@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Blog | Desinix Insights</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .hero-bg {
+            /* Subtle dark/teal gradient for the hero section */
+            background: linear-gradient(135deg, #0f172a 0%, #14b8a6 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (Consistent with Home Page) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-extrabold text-teal-600 hover:text-teal-700 transition duration-300">
+                    Desin<span class="text-gray-900">ix</span>
+                </a>
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Home</a>
+                    <a href="index.html#websites" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Websites</a>
+                    <a href="index.html#posters" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Posters</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Contact</a>
+                </nav>
+                <!-- CTA Button -->
+                <a href="index.html#contact" class="hidden md:inline-flex px-4 py-2 text-sm font-semibold text-white bg-teal-600 rounded-full shadow-lg hover:bg-teal-700 transition duration-300">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="hero-bg py-20 text-center text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">The Desinix <span class="text-yellow-300">Design Blog</span></h1>
+            <p class="text-xl text-teal-100 mb-8">
+                Insights, tips, and trends on web design, print media, and visual branding.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Blog Content Layout -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- Column 1 & 2: Main Article Grid -->
+            <div class="lg:col-span-2 space-y-12">
+
+                <!-- Featured Post (Larger Card) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+                    <img src="https://placehold.co/1200x500/0f172a/ffffff?text=FEATURED+POST:+Web+Design+Trends" alt="Featured image showing a clean, modern website design mockup" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/0f172a/ffffff?text=FEATURED+POST+IMAGE'">
+                    <div class="p-8">
+                        <p class="text-sm font-semibold text-teal-600 uppercase mb-2">Web Design</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4 hover:text-teal-700 transition cursor-pointer">
+                            The 5 Essential UX Principles Every Modern Website Needs
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            User Experience (UX) is the foundation of a successful website. Learn how to implement clear navigation, fast load times, and intuitive layouts that keep your visitors engaged and convert them into customers.
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500">
+                            <span>By Desinix Team | November 15, 2025</span>
+                            <a href="#" class="text-teal-600 font-semibold hover:text-teal-700">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Posts Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    
+                    <!-- Post 1: Poster Design -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400/14b8a6/ffffff?text=Poster+Design+Article" alt="Image of a colorful, eye-catching poster design" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/14b8a6/ffffff?text=POSTER+DESIGN+IMAGE'">
+                        <div class="p-5">
+                            <p class="text-xs font-semibold text-yellow-500 uppercase mb-1">Print Media</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-teal-700 transition cursor-pointer">
+                                CMYK vs. RGB: Why Your Poster Colors Always Change
+                            </h3>
+                            <p class="text-gray-500 text-sm mb-4">
+                                Understanding color profiles is crucial for print design. We break down the difference between screen colors and printer inks.
+                            </p>
+                            <a href="#" class="text-teal-600 font-semibold text-sm hover:underline">Continue Reading &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Post 2: Branding -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400/9ca3af/ffffff?text=Branding+Guide" alt="Image showing different brand elements like logo and typography" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/9ca3af/ffffff?text=BRANDING+IMAGE'">
+                        <div class="p-5">
+                            <p class="text-xs font-semibold text-teal-600 uppercase mb-1">Branding</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-teal-700 transition cursor-pointer">
+                                The Simple Guide to Choosing Your Brand's Font Pairings
+                            </h3>
+                            <p class="text-gray-500 text-sm mb-4">
+                                Typography defines your brand's voice. Learn how to combine serif and sans-serif fonts effectively.
+                            </p>
+                            <a href="#" class="text-teal-600 font-semibold text-sm hover:underline">Continue Reading &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3: SEO -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400/273a5a/ffffff?text=SEO+Checklist" alt="Image of a graph representing website traffic or SEO success" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/273a5a/ffffff?text=SEO+IMAGE'">
+                        <div class="p-5">
+                            <p class="text-xs font-semibold text-teal-600 uppercase mb-1">Web Dev</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-teal-700 transition cursor-pointer">
+                                10 Easy SEO Fixes for Any New Small Business Website
+                            </h3>
+                            <p class="text-gray-500 text-sm mb-4">
+                                Get found online! A comprehensive checklist of critical search engine optimization steps you can take today.
+                            </p>
+                            <a href="#" class="text-teal-600 font-semibold text-sm hover:underline">Continue Reading &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Post 4: Productivity/Workflow -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Productivity+Tips" alt="Image of a well-organized desk or workflow chart" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/f59e0b/ffffff?text=PRODUCTIVITY+IMAGE'">
+                        <div class="p-5">
+                            <p class="text-xs font-semibold text-yellow-500 uppercase mb-1">Tips & Tricks</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-teal-700 transition cursor-pointer">
+                                Mastering Design Workflow: From Concept to Launch
+                            </h3>
+                            <p class="text-gray-500 text-sm mb-4">
+                                Our step-by-step process for efficient design project management and client feedback cycles.
+                            </p>
+                            <a href="#" class="text-teal-600 font-semibold text-sm hover:underline">Continue Reading &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Column 3: Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                
+                <!-- Search Bar -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Search Blog</h3>
+                    <input type="text" placeholder="Type keywords..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-teal-500 focus:border-teal-500 text-gray-900">
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Categories</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-teal-100 text-teal-700 text-sm font-medium rounded-full hover:bg-teal-200 transition">Web Design (12)</a>
+                        <a href="#" class="px-3 py-1 bg-teal-100 text-teal-700 text-sm font-medium rounded-full hover:bg-teal-200 transition">Branding (8)</a>
+                        <a href="#" class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-medium rounded-full hover:bg-yellow-200 transition">Print Media (5)</a>
+                        <a href="#" class="px-3 py-1 bg-teal-100 text-teal-700 text-sm font-medium rounded-full hover:bg-teal-200 transition">SEO & Marketing (15)</a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-300 transition">Case Studies (3)</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup (Consistent with Index Footer) -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-md text-white">
+                    <h3 class="text-xl font-bold mb-3">Stay Updated</h3>
+                    <p class="text-sm text-teal-100 mb-4">Get the latest design insights and exclusive offers delivered weekly.</p>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to the Desinix blog!');">
+                        <input type="email" placeholder="Your Email Address" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:ring-teal-500 focus:border-teal-500 mb-3" required>
+                        <button type="submit" class="w-full px-4 py-2 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300 shadow-md">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer (Consistent with Home Page) -->
+    <footer class="bg-gray-900 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-400">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Desinix</h4>
+                    <p class="text-sm">Crafting digital and physical brand experiences.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-teal-500 transition duration-300">Home</a></li>
+                        <li><a href="index.html#websites" class="hover:text-teal-500 transition duration-300">Website Services</a></li>
+                        <li><a href="index.html#posters" class="hover:text-teal-500 transition duration-300">Poster Printing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Short -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+                    <p class="text-sm">support@desinix.co.in</p>
+                    <p class="text-sm">+91 9995507206</p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
+                &copy; 2026 Desinix. All rights reserved. Built with passion.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

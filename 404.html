@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Desinix</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles using the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Light background for the whole page */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- 404 Error Container -->
+    <div class="max-w-xl w-full text-center bg-white p-8 sm:p-12 rounded-2xl shadow-2xl border-t-8 border-teal-600">
+        
+        <!-- Large Error Code -->
+        <div class="flex justify-center items-center mb-6">
+            <span class="text-8xl sm:text-9xl font-extrabold text-teal-600 tracking-tight leading-none">4</span>
+            <span class="text-8xl sm:text-9xl font-extrabold text-gray-900 tracking-tight leading-none mx-2 sm:mx-4">0</span>
+            <span class="text-8xl sm:text-9xl font-extrabold text-teal-600 tracking-tight leading-none">4</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+            Oops! Page Lost in the Design Cloud
+        </h1>
+
+        <!-- Subtext/Description -->
+        <p class="text-lg text-gray-600 mb-8">
+            The page you're looking for might have been moved, deleted, or never existed. Don't worry, we'll get you back on track.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            
+            <!-- Home Button (Primary) -->
+            <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-teal-600 hover:bg-teal-700 transition duration-300 transform hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1z"></path></svg>
+                Go to Homepage
+            </a>
+
+            <!-- Contact Button (Secondary) - Assuming contact.html exists -->
+            <a href="/contact/" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-semibold rounded-full shadow-md text-gray-700 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                Contact Support
+            </a>
+        </div>
+        
+        <!-- Subtle Footer Note -->
+        <div class="mt-10 text-sm text-gray-400">
+            Desinix - Design focused, error minimized.
+        </div>
+    </div>
+
+</body>
+</html>

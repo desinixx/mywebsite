@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://desinix.co.in/sitemap.xml

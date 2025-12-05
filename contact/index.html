@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Desinix: Get Started Today</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for better UI -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .contact-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #20b8a6 100%);
+        }
+        .form-input-focus:focus {
+            --tw-ring-color: #0d9488;
+        }
+        /* Loading Spinner Style */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 2px solid #ffffff;
+            width: 16px;
+            height: 16px;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        /* Green Spinner for upload status */
+        .spinner-green {
+            border: 2px solid rgba(13, 148, 136, 0.1);
+            border-top: 2px solid #0d9488;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Drag and Drop Zone Active State */
+        .drag-active {
+            border-color: #0d9488 !important;
+            background-color: #f0fdfa !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="https://desinix.co.in/" class="text-2xl font-extrabold text-teal-600 hover:text-teal-700 transition duration-300">
+                    Desin<span class="text-gray-900">ix</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="https://desinix.co.in/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Home</a>
+                    <a href="https://desinix.co.in/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Websites</a>
+                    <a href="https://desinix.co.in/" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">Posters</a>
+                    <a href="#contact-form" class="text-teal-600 font-bold transition duration-300">Contact</a>
+                    <a href="/about/index.html" class="text-gray-600 hover:text-teal-600 font-medium transition duration-300">AboutUs</a>
+                </nav>
+                <a href="#contact-form" class="hidden md:inline-flex px-4 py-2 text-sm font-semibold text-white bg-teal-600 rounded-full shadow-lg hover:bg-teal-700 transition duration-300 transform hover:scale-105">
+                    Start Your Project
+                </a>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-teal-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/index.html#websites" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Websites</a>
+                <a href=/index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Home</a>
+                <a href="/index.html#posters" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">Posters</a>
+                <a href="#contact-form" class="block px-3 py-2 rounded-md text-base font-medium text-teal-600 hover:bg-gray-50 transition duration-300">Contact</a>
+                <a href="/about/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 transition duration-300">AboutUs</a>
+            </div>
+            <a href="#contact-form" class="block w-full text-center px-4 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 transition duration-300">
+                Start Your Project
+            </a>
+        </div>
+    </header>
+
+    <section class="contact-bg py-16 sm:py-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">
+                Let's <span class="text-yellow-300">Build</span> Something Great.
+            </h1>
+            <p class="text-xl sm:text-2xl text-teal-100 max-w-3xl mx-auto">
+                Ready to transform your vision into reality? Fill out the form below or reach out directly.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                <!-- Contact Info Sidebar -->
+                <div class="lg:col-span-1 space-y-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-b-2 border-yellow-500 pb-2 inline-block">Direct Contact</h2>
+
+                    <div class="flex items-start">
+                        <div class="text-teal-600 mr-4 mt-1"><i data-lucide="mail" class="w-8 h-8"></i></div>
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900">Email Us</p>
+                            <a href="mailto:support@desinix.co.in" class="text-teal-600 hover:text-teal-800 transition duration-300">support@desinix.co.in</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="text-teal-600 mr-4 mt-1"><i data-lucide="phone" class="w-8 h-8"></i></div>
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900">Call Us</p>
+                            <a href="tel:+919995507206" class="text-teal-600 hover:text-teal-800 transition duration-300">+91 99955 07206</a>
+                            <p class="text-sm text-gray-500 mt-1">Mon - Fri, 9 AM to 5 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="text-teal-600 mr-4 mt-1"><i data-lucide="map-pin" class="w-8 h-8"></i></div>
+                        <div>
+                            <p class="text-lg font-semibold text-gray-900">Our Studio</p>
+                            <address class="text-gray-600 not-italic">
+                                Desinix Headquarters<br>
+                                4th Floor, Desinix Hub Tower<br>
+                                Calicut, Kerala, India 673001
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Form Area -->
+                <div id="contact-form" class="lg:col-span-2 bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-teal-600">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Send Us A Message</h2>
+
+                    <!-- Response Message Area -->
+                    <div id="response-message" class="hidden text-sm font-medium transition-all duration-300 ease-in-out mb-4 p-4 rounded-lg flex items-start" role="alert">
+                        <i data-lucide="info" class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0"></i>
+                        <span id="response-text"></span>
+                    </div>
+
+                    <form id="contact_form" class="space-y-6">
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="full-name" placeholder="Enter Your Name" required
+                                class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com" required
+                                class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Type of Project</label>
+                            <select id="project-type" required
+                                class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white transition-colors">
+                                <option value="">Select a service...</option>
+                                <option value="website">Website Creation</option>
+                                <option value="poster">Poster & Print Design</option>
+                                <option value="both">Both Website & Print</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- UNIFIED AUTO-UPLOAD IMAGE COMPONENT -->
+                        <div class="space-y-3">
+                            <label class="block text-sm font-medium text-gray-700">Reference Images (Max 3, Optional)</label>
+                            
+                            <!-- Drop Zone -->
+                            <div id="drop-zone" class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-teal-500 hover:bg-gray-50 transition-all cursor-pointer group relative">
+                                <input type="file" id="multi-file-input" accept="image/*" multiple class="hidden">
+                                <div class="flex flex-col items-center justify-center space-y-2">
+                                    <div class="p-3 bg-teal-50 rounded-full group-hover:bg-teal-100 transition-colors">
+                                        <i data-lucide="upload-cloud" class="w-8 h-8 text-teal-600"></i>
+                                    </div>
+                                    <p class="text-sm text-gray-600 font-medium">
+                                        <span class="text-teal-600 hover:underline">Click to upload</span> or drag and drop
+                                    </p>
+                                    <p class="text-xs text-gray-400">Images upload automatically. Max 3 files.</p>
+                                </div>
+                            </div>
+
+                            <!-- File List Container -->
+                            <div id="file-list-container" class="space-y-3 hidden">
+                                <!-- Dynamic File Items will be injected here -->
+                            </div>
+                        </div>
+                        <!-- END UPLOAD COMPONENT -->
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tell us about your project</label>
+                            <textarea id="message" rows="4" placeholder="Describe your vision..." required
+                                class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-button"
+                            class="w-full flex justify-center items-center px-6 py-3 text-white font-semibold bg-teal-600 rounded-full hover:bg-teal-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <span>Send Inquiry</span>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-400">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Desinix</h4>
+                    <p class="text-sm">Crafting digital and physical brand experiences.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-teal-500 transition duration-300"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-teal-500 transition duration-300"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-teal-500 transition duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/index.html#websites" class="hover:text-teal-500 transition duration-300">Website Services</a></li>
+                        <li><a href="/index.html#posters" class="hover:text-teal-500 transition duration-300">Poster Printing</a></li>
+                        <li><a href="#contact-form" class="hover:text-teal-500 transition duration-300">Request a Quote</a></li>
+                        <li><a href="/contact/index.html" class="hover:text-teal-500 transition duration-300">Design Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/design-blog/" class="hover:text-teal-500 transition duration-300">Design Blog</a></li>
+                        <li><a href="/pricing-guide/" class="hover:text-teal-500 transition duration-300">Pricing Guide</a></li>
+                        <li><a href="/support-center/" class="hover:text-teal-500 transition duration-300">Support Center</a></li>
+                        <li><a href="/terms-of-service/" class="hover:text-teal-500 transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm mb-4">Subscribe for design tips and exclusive offers.</p>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:ring-teal-500 focus:border-teal-500 mb-3" required>
+                        <button type="submit" class="w-full px-4 py-2 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
+                &copy; 2026 Desinix. All rights reserved. Built with passion.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // NOTE: Replace this with your newly deployed Google Apps Script URL
+        const webAppUrl = "https://script.google.com/macros/s/AKfycbwEUU8Zqg2imQLp0UJZdP3lDCqsvq3Iq00d1lN9xnFyToYTgrCyAP2lMkkmBAy2qK-i/exec"; 
+        const imgbbApiKey = "ee919fb9745677cafe5942124aaf932c"; 
+
+        const responseMessage = document.getElementById('response-message');
+        const responseText = document.getElementById('response-text');
+        const submitButton = document.getElementById('submit-button');
+        const contactForm = document.getElementById("contact_form");
+
+        // --- Auto-Upload Logic ---
+        const dropZone = document.getElementById('drop-zone');
+        const multiFileInput = document.getElementById('multi-file-input');
+        const fileListContainer = document.getElementById('file-list-container');
+        
+        // State to hold selected files: { id: timestamp, file: FileObj, url: string|null, status: 'uploading'|'done'|'error' }
+        let selectedFiles = [];
+
+        // 1. Drag & Drop Event Listeners
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+        function preventDefaults(e) { e.preventDefault(); e.stopPropagation(); }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.add('drag-active'), false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => dropZone.classList.remove('drag-active'), false);
+        });
+
+        dropZone.addEventListener('drop', handleDrop, false);
+        dropZone.addEventListener('click', () => multiFileInput.click());
+        multiFileInput.addEventListener('change', handleFiles);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleNewFiles(files);
+        }
+
+        function handleFiles(e) {
+            const files = this.files;
+            handleNewFiles(files);
+        }
+
+        function handleNewFiles(files) {
+            const remainingSlots = 3 - selectedFiles.length;
+            if (remainingSlots <= 0) {
+                displayMessage('info', "Maximum 3 files allowed.");
+                return;
+            }
+
+            const filesToAdd = Array.from(files).slice(0, remainingSlots);
+            
+            filesToAdd.forEach(file => {
+                if (!file.type.startsWith('image/')) {
+                    displayMessage('error', `Skipped ${file.name}: Not an image.`);
+                    return;
+                }
+                
+                // Create file object
+                const newFile = {
+                    id: Date.now() + Math.random(),
+                    file: file,
+                    url: null,
+                    status: 'uploading' // Start uploading immediately
+                };
+                
+                selectedFiles.push(newFile);
+                
+                // Trigger upload automatically
+                uploadImageToCloud(newFile);
+            });
+
+            renderFileList();
+            multiFileInput.value = ''; // Reset input
+        }
+
+        // 2. Render File List
+        function renderFileList() {
+            fileListContainer.innerHTML = '';
+            
+            if (selectedFiles.length === 0) {
+                fileListContainer.classList.add('hidden');
+                return;
+            }
+            
+            fileListContainer.classList.remove('hidden');
+
+            selectedFiles.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = "flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm";
+                
+                let statusHtml = '';
+                if (item.status === 'uploading') {
+                    statusHtml = `<div class="flex items-center text-xs text-teal-600 font-medium"><div class="spinner spinner-green mr-2"></div>Uploading...</div>`;
+                } else if (item.status === 'done') {
+                    statusHtml = `<span class="flex items-center text-xs text-green-600 font-bold"><i data-lucide="check-circle" class="w-4 h-4 mr-1"></i> Ready</span>`;
+                } else if (item.status === 'error') {
+                    statusHtml = `<button type="button" onclick="retryUpload(${index})" class="text-xs text-red-600 hover:underline font-medium flex items-center"><i data-lucide="alert-circle" class="w-3 h-3 mr-1"></i> Failed (Retry)</button>`;
+                }
+
+                div.innerHTML = `
+                    <div class="flex items-center space-x-3 overflow-hidden">
+                        <div class="bg-gray-100 p-2 rounded-md">
+                            <i data-lucide="image" class="w-5 h-5 text-gray-500"></i>
+                        </div>
+                        <span class="text-sm text-gray-700 truncate font-medium max-w-[150px] sm:max-w-xs">${item.file.name}</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        ${statusHtml}
+                        <button type="button" onclick="removeFile(${index})" class="text-gray-400 hover:text-red-500 transition-colors">
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                `;
+                fileListContainer.appendChild(div);
+            });
+            
+            lucide.createIcons();
+        }
+
+        // 3. Remove File
+        window.removeFile = function(index) {
+            selectedFiles.splice(index, 1);
+            renderFileList();
+        }
+
+        // 4. Retry Upload
+        window.retryUpload = function(index) {
+            const item = selectedFiles[index];
+            if(item) {
+                item.status = 'uploading';
+                renderFileList();
+                uploadImageToCloud(item);
+            }
+        }
+
+        // 5. Actual API Upload Logic (Auto-triggered)
+        async function uploadImageToCloud(item) {
+            const formData = new FormData();
+            formData.append("image", item.file);
+
+            try {
+                const imgResponse = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbApiKey}`, {
+                    method: "POST",
+                    body: formData
+                });
+                const imgResult = await imgResponse.json();
+
+                if (imgResult.success) {
+                    item.url = imgResult.data.url; // Capture the Link
+                    item.status = 'done';
+                } else {
+                    throw new Error(imgResult.error?.message || "Upload failed");
+                }
+            } catch (error) {
+                console.error("Upload Error:", error);
+                item.status = 'error';
+            } finally {
+                renderFileList(); // Update UI
+            }
+        }
+
+        // --- Utility Functions ---
+
+        function setButtonLoading(button, isLoading, text) {
+            const span = button.querySelector('span');
+            button.disabled = isLoading;
+            if (isLoading) {
+                if (span) span.textContent = text; // Ensure span exists before setting text
+                button.classList.add('opacity-75', 'cursor-not-allowed');
+                
+                // Use a more specific class for the white spinner to prevent conflicts
+                if (!button.querySelector('.spinner-white-load')) {
+                    const spinner = document.createElement('div');
+                    spinner.className = 'spinner border-white border-t-transparent mr-2 spinner-white-load'; 
+                    button.prepend(spinner);
+                }
+            } else {
+                if (span) span.textContent = text;
+                button.classList.remove('opacity-75', 'cursor-not-allowed');
+                const spinner = button.querySelector('.spinner-white-load');
+                if (spinner) button.removeChild(spinner);
+            }
+        }
+
+        function displayMessage(type, message) {
+            responseText.textContent = message;
+            responseMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700', 'bg-blue-100', 'text-blue-700');
+            
+            const icon = responseMessage.querySelector('i');
+            
+            // CRITICAL FIX: Ensure icon exists before calling setAttribute
+            if (icon) { 
+                icon.setAttribute('data-lucide', type === 'success' ? 'check-circle' : (type === 'error' ? 'alert-triangle' : 'info'));
+                lucide.createIcons(); // Re-create the icon element
+            }
+            
+            if (type === 'success') {
+                responseMessage.classList.add('bg-green-100', 'text-green-700');
+            } else if (type === 'error') {
+                responseMessage.classList.add('bg-red-100', 'text-red-700');
+            } else {
+                responseMessage.classList.add('bg-blue-100', 'text-blue-700');
+            }
+        }
+
+        // --- Form Submission Logic ---
+
+        contactForm.addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            // 1. Check if any uploads are still in progress
+            const uploadingFiles = selectedFiles.some(f => f.status === 'uploading');
+            if (uploadingFiles) {
+                displayMessage('info', "Please wait, images are still uploading...");
+                return;
+            }
+
+            // 2. Check if any uploads failed
+            const errorFiles = selectedFiles.some(f => f.status === 'error');
+            if (errorFiles) {
+                displayMessage('error', "Some images failed to upload. Please remove or retry them.");
+                return;
+            }
+
+            // 3. Prepare for Submission
+            responseMessage.classList.add('hidden');
+            setButtonLoading(submitButton, true, "Sending Inquiry...");
+
+            try {
+                const name = document.getElementById("full-name").value;
+                const email = document.getElementById("email").value;
+                const service = document.getElementById("project-type").value;
+                const desc = document.getElementById("message").value;
+                
+                // 4. Get the Generated Links (Important step!)
+                const imageUrl1 = selectedFiles[0]?.url || "";
+                const imageUrl2 = selectedFiles[1]?.url || "";
+                const imageUrl3 = selectedFiles[2]?.url || "";
+
+                const data = {
+                    "name": name,
+                    "email": email,
+                    "service": service,
+                    "desc": desc,
+                    // These variables contain the ImgBB links
+                    "imageUrl1": imageUrl1,
+                    "imageUrl2": imageUrl2, 
+                    "imageUrl3": imageUrl3  
+                };
+
+                const sheetResponse = await fetch(webAppUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "text/plain;charset=utf-8" },
+                    body: JSON.stringify(data)
+                });
+
+                const sheetResult = await sheetResponse.json();
+
+                if (sheetResult.status === 'SUCCESS' || sheetResult.status === 'success') {
+                    displayMessage('success', "Message sent successfully! We will contact you soon.");
+                    contactForm.reset();
+                    selectedFiles = []; // Clear local file list
+                    renderFileList();   // Clear UI
+                } else {
+                    // Check for null/undefined before throwing
+                    const errorMessage = sheetResult.message || "Unknown error occurred during sheet processing.";
+                    throw new Error(errorMessage);
+                }
+
+            } catch (error) {
+                console.error("Submission Error:", error);
+                // The error object might be a simple string or a complex object. Safely display the message.
+                const userMessage = error.message ? 'Submission failed: ' + error.message : 'Submission failed due to an unexpected error.';
+                displayMessage('error', userMessage);
+            } finally {
+                setButtonLoading(submitButton, false, "Send Inquiry");
+            }
+        });
+        
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(mobileMenuBtn && mobileMenu){
+             mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+             });
+        }
+    </script>
+</body>
+</html>
